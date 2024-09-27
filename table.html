@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+    <h1>
+        table
+    </h1>
+    <form onsubmit="tableGenerator(); return false">
+        <h1>
+            table of 2
+        </h1>
+        <input id="input1" type="number">
+
+        <input id="input2" type="number">
+
+        <button>Table</button>
+    </form>
+    <div class="result"></div>
+    <script>
+
+        function tableGenerator(){
+            let input1 = Number(document.querySelector("#input1").value);
+            let input2 = Number(document.querySelector("#input2").value);
+            // let userinput = parseInt(prompt("Enter the starting number for the table:"));
+            let table = "";
+            // for (let i = userinput; i <= userinput + 10; i++) {
+            //     table += `${i} x ${i} = ${i * i}<br>`;
+            // }
+            for (let i=1; i <= input2; i++){
+                table += input1 + " x " + i + " = " + (input1 * i) + "<br>";
+            }
+            document.querySelector(".result").innerHTML =  table;
+        }
+        
+    </script>
+</body>
+</html>
